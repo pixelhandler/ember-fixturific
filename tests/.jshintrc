@@ -5,6 +5,7 @@
     "location",
     "setTimeout",
     "$",
+    "sinon",
     "-Promise",
     "define",
     "console",

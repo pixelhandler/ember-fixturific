@@ -1,7 +1,27 @@
-# Http-mocks-with-fixtures
+# ember-fixturific
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+An example project: Http-mocks-with-fixtures that uses .json files that are shared between http-mocks server and acceptance tests.
+
+Running the project with `npm run start-mock` will use the the http-mocks server, using `ember server` will not. See the [config/environment.js] file and [server/index.js] files that use an environment variable `process.env.USE_HTTP_MOCKS`.
+
+The setup for sharing the JSON is done like with:
+
+* [fixtures] directory for the raw .json files
+* [server] directory has an example endpoint mocked for /api/colors
+* [Brocfile.js] build which converts the .json files in the [fixtures] directory into ES6 modules for use in yours tests. 
+* [json-to-module.js] file which is used by the build to convert the fixtures.
+* [bower.js] uses a git url for the sinon dependency, needed to use `bower install` after adding the git url
+
+Some commands use to setup this example project:
+
+		ember g route index
+		ember g model color
+		ember g adapter application
+
+		npm install broccoli-static-compiler --save-dev
+		npm install broccoli-es6-concatenator --save-dev
+
+		bower install
 
 ## Prerequisites
 
