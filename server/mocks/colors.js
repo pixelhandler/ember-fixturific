@@ -2,7 +2,7 @@ module.exports = function(app) {
   var express = require('express');
   var colorsRouter = express.Router();
   var endpoint = '/api/colors';
-  var json = require('fixtures' + '/api/colors');
+  var json = require('../../fixtures' + '/api/colors');
 
   colorsRouter.get('/', function(req, res) {
     res.send(JSON.stringify(json));

@@ -1,10 +1,6 @@
 import Ember from 'ember';
-import {
-  module,
-  test
-} from 'qunit';
+import { module, test } from 'qunit';
 import startApp from 'http-mocks-with-fixtures/tests/helpers/start-app';
-
 import jsonMock from 'fixtures/api/colors';
 
 var application, colors, sandbox;
